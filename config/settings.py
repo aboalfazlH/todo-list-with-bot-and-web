@@ -23,7 +23,11 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = []
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'apps.authenticated',
+    'apps.todo',
+    'apps.core',
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
     
@@ -66,6 +70,7 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'authenticated.User'
 
 
 AUTH_PASSWORD_VALIDATORS = [
